@@ -254,7 +254,7 @@ class Record(object):
                             password = passwd,
                             saved = datetime.datetime(*tm[:6]),
                             ))
-        ret.sort(lambda a, b: cmp(a['saved'], b['saved']))
+        ret.sort(key=lambda a, b: cmp(a['saved'], b['saved']))
         return ret
     
     def _find_hist(self):
